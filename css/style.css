@@ -19,13 +19,26 @@ p {
   margin-top: 0;
   line-height: 1.6;
 }
-#main h1 {
-  background-image: url(../images/header_bg.jpg);
-  padding: 13px 30px 10px 20px;
-  font-size: 26px;
-  color: #44382d;
-  border-bottom: solid 3px #716961;
+
+/* start/h1タグのカスタマイズ */
+#main h1{
+position: relative;
+padding: 0.5em;
+background: #352b23;;
+color: white;
 }
+
+#main h1::before {
+position: absolute;
+content: '';
+top: 100%;
+left: 0;
+border: none;
+border-bottom: solid 15px transparent;
+border-right: solid 20px rgb(149, 158, 155);
+}
+/* ここまで/h1タグのカスタマイズ */
+
 #main h2 {
   font-size: 22px;
   border: 1px solid #b7a077;
@@ -61,7 +74,7 @@ header #header_contact {
   padding: 0;
 }
 #global_navi ul li {
-  width: 195px;
+  width: 244px;
   float: left;
   margin-right: 1px;
   text-align: center;
@@ -74,12 +87,13 @@ header #header_contact {
   text-decoration: none;
   transition: background-color 0.2s linear;
 }
-#global_navi ul li.current a { 
-  background-color: #b7a077; 
+#global_navi ul li.current a {
+  background-color: #b7a077;
 }
-#global_navi ul li a:hover { 
+#global_navi ul li a:hover {
   background-color: #8c7a5b;
 }
+
 #wrapper {
   width: 980px;
   margin: 0 auto;
@@ -207,6 +221,14 @@ footer small {
   color: #9C9689;
   text-align: center;
 }
+
+#sidebar figcaption {
+  font-size: 12px;
+  color: #9C9689;
+  text-align: center;
+}
+}
+
 #news dl { overflow: hidden; }
 #news dt {
   float: left;
@@ -218,28 +240,46 @@ footer small {
   margin-left: 8em;
   margin-bottom: 10px;
 }
-#course table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 16px;
+
+.box5{
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    color: #5d627b;
+    background: white;
+    border-top: solid 5px #5d627b;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
 }
-#course th,
-#course td {
-  border: 1px solid #c7c7c7;
-  padding: 8px;
+.box5 p {
+    margin: 0;
+    padding: 0;
 }
-#course th {
-  background-color: #f1ede4;
-  text-align: left;
-  width: 5em;
+
+.ruby-img{
+  text-align:center;
+  margin: 20px 0 35px 0;
 }
+
+.html-img{
+  text-align:center;
+}
+
+.wordpress-img{
+  text-align:center;
+  margin: 10px 0 30px 0;
+}
+
+.english-img{
+  text-align:center;
+  margin: 50px 0 60px 0;
+}
+
 #gallery ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 #gallery ul li {
-  width: 220px;
+  width: 720px;
   margin: 0 30px 30px 0;
   padding: 10px 0;
   border: solid 1px #ccc;
@@ -249,9 +289,39 @@ footer small {
   font-weight: bold;
   box-shadow: 2px 2px 3px rgba(0,0,0,0.1);
 }
-#gallery ul li:nth-child(3n) { 
-  margin-right: 0; 
+
+#gallery .main {
+  width: 720px;
+  margin: 0 30px 30px 0;
+  padding: 10px 0;
+  border: solid 1px #ccc;
+  float: left;
+  text-align: center;
+  color: #b7a077;
+  font-weight: bold;
+  box-shadow: 2px 2px 3px rgba(0,0,0,0.1);
 }
+
+#gallery .thumb img{
+  max-width: 50%;
+  border: 4px solid #fff;
+  border-radius: 400px;
+  box-shadow: 0px 0px 10px #000;
+  height: 60px;
+  margin: 10px;
+  width: 60px;
+}
+
+
+
+
+
+
+
+
+
+
+
 #entry dl {
   background: #f1ede4;
   border: 1px solid #ddd;
@@ -286,14 +356,14 @@ footer small {
 #entry #category3,
 #entry #questionnaire2,
 #entry #questionnaire3 {
-  margin-left: 15px; 
+  margin-left: 15px;
 }
 #entry #detail {
   width: 36em;
   height: 15em;
 }
 #entry #submit_button_cover {
-  text-align: center; 
+  text-align: center;
 }
 #entry #submit_button {
   background-color: #b7a077;
@@ -308,6 +378,14 @@ footer small {
 #entry #submit_button:hover {
   background: #c7ae81;
 }
+
+.github_link{
+  border: double;
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+/* スマホ表示 ブレイクポイント767px */
 @media screen and (max-width : 767px){
   img {
     max-width: 100%;
@@ -317,7 +395,7 @@ footer small {
   #sidebar,
   #wrapper{
     width: 100%;
-  }  
+  }
   header h1 {
     float: none;
     text-align: center;
@@ -336,10 +414,9 @@ footer small {
   }
   #global_navi ul li a {
     margin: 0;
-  }
-  #global_navi ul li:last-child {
     width: 100%;
   }
+
   #main {
     width: 100%;
     padding: 0 5%;
@@ -381,5 +458,37 @@ footer small {
   #entry #detail {
     width: 100%;
     box-sizing: border-box;
+  }
+
+  #gallery ul li {
+    width: 100%;
+  }
+
+  .github_link{
+    width: 100%;
+    margin-bottom: 18px;
+  }
+
+
+  #gallery .main {
+    width: 100%;
+    margin: 0 30px 30px 0;
+    padding: 10px 0;
+    border: solid 1px #ccc;
+    float: left;
+    text-align: center;
+    color: #b7a077;
+    font-weight: bold;
+    box-shadow: 2px 2px 3px rgba(0,0,0,0.1);
+  }
+
+  #gallery .thumb img{
+    max-width: 50%;
+    border: 4px solid #fff;
+    border-radius: 400px;
+    box-shadow: 0px 0px 10px #000;
+    height: 10px;
+    margin: 10px;
+    width: 10px;
   }
 }

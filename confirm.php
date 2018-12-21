@@ -39,29 +39,29 @@
       </div>
       <article>
         <h1>お問い合わせ</h1>
-        <p class="lead">Twitter経由でのお問い合わせを推奨させていただいてますが、以下のフォームからも問い合わせ可能です。お気軽にお問い合わせください。</p>
+        <p class="lead">お気軽にお問い合わせください。Twitter経由でのお問い合わせも勿論可能です。</p>
         <p>下記メールフォームをご記入いただき、「送信する」ボタンを押してください。</p>
         <p>「<span class="must">※</span>」は必須項目です。</p>
         <section>
-          <h2>お問い合わせフォーム</h2>
-          <form action="./confirm.php" method="post" id="entry">
-            <dl>
-              <dt>メールアドレス <span class="must">※</span></dt>
-              <dd><input type="email" name="email" id="email" required></dd>
-              <dt>お問い合せ内容</dt>
-              <dd>
-                <textarea name="detail" id="detail" placeholder="お名前：山田 太郎&#10;問い合わせ内容:仕事の依頼です。"></textarea>
-              </dd>
-            </dl>
-            <p id="submit_button_cover">
-              <input type="submit" id="submit_button" value="送信する">
-            </p>
-          </form>
+          <h2>
+            <?php
+              mb_language("Japanese");
+              mb_internal_encoding("UTF-8");
+              $to = "subbusiness1205@gmail.com";
+              $subject = "お問い合わせ内容確認";
+              $message = $_POST['detail'];
+              $headers = $_POST['email'];
+              if(mb_send_mail($to, $subject, $message, $headers)){
+                echo "メールを送信しました。折り返しのご連絡お待ちください";
+              } else {
+                echo "メールの送信に失敗しました。";
+              };
+            ?>
+          </h2>
         </section>
       </article>
     </div>
     <!--/メイン-->
-
     <!--サイド-->
     <aside id="sidebar">
       <section id="side_banner">
