@@ -1,5 +1,5 @@
 @charset "utf-8";
-
+/* 基本設定 */
 body {
   margin: 0;
   padding: 0;
@@ -20,7 +20,7 @@ p {
   line-height: 1.6;
 }
 
-/* start/h1タグのカスタマイズ */
+/* h1タグのカスタマイズ */
 #main h1{
 position: relative;
 padding: 0.5em;
@@ -37,14 +37,15 @@ border: none;
 border-bottom: solid 15px transparent;
 border-right: solid 20px rgb(149, 158, 155);
 }
-/* ここまで/h1タグのカスタマイズ */
 
+/* h2タグのカスタマイズ */
 #main h2 {
   font-size: 22px;
   border: 1px solid #b7a077;
   padding: 11px 22px;
   border-radius: 5px;
 }
+/* h3タグのカスタマイズ */
 #main h3 {
   font-size: 18px;
   border-left: solid 3px #b7a077;
@@ -313,16 +314,6 @@ footer small {
   width: 60px;
 }
 
-
-
-
-
-
-
-
-
-
-
 #entry dl {
   background: #f1ede4;
   border: 1px solid #ddd;
@@ -345,24 +336,17 @@ footer small {
   margin-left: 13em;
 }
 .must { color: #f00; }
-#entry #name {
-  width: 15em;
-  padding: 3px;
-}
 #entry #email {
   width: 25em;
   padding: 3px;
 }
-#entry #category2,
-#entry #category3,
-#entry #questionnaire2,
-#entry #questionnaire3 {
-  margin-left: 15px;
-}
+
+/* お問い合わせの内容ボックのサイズ */
 #entry #detail {
   width: 36em;
   height: 15em;
 }
+
 #entry #submit_button_cover {
   text-align: center;
 }
@@ -384,4 +368,9 @@ footer small {
   border: double;
   text-align: center;
   margin-bottom: 18px;
+}
+
+/* TOPページボタンはPCでは非表示にする */
+.pagetop a{
+    display: none; /*初期設定ではボタンは非表示にする*/
 }
