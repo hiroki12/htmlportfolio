@@ -51,21 +51,25 @@ border-right: solid 20px rgb(149, 158, 155);
   border-left: solid 3px #b7a077;
   padding: 4px 9px 4px 14px;
 }
+
 header {
   width: 980px;
-  margin: 0 auto;
+  margin: 0 auto; /*上下のmarginは0だが左右のmarginはautoで中央揃えする*/
 }
+/* ヘッダーロゴ */
 header h1 {
-  float: left;
+  float: left;/* ヘッダーロゴは左寄せ */
   margin: 5px 0 10px;
 }
+
 header #header_contact {
-  float: right;
+  float: right; /* ヘッダーコンタクトは左寄せ */
   margin: 35px 0;
 }
+
+/*  TOPメニューバーのスタイル */
 #global_navi {
   width: 980px;
-  clear: both;
   overflow: hidden;
   margin: 16px auto;
 }
@@ -74,6 +78,7 @@ header #header_contact {
   margin: 0;
   padding: 0;
 }
+
 #global_navi ul li {
   width: 244px;
   float: left;
@@ -88,9 +93,11 @@ header #header_contact {
   text-decoration: none;
   transition: background-color 0.2s linear;
 }
+
 #global_navi ul li.current a {
   background-color: #b7a077;
 }
+
 #global_navi ul li a:hover {
   background-color: #8c7a5b;
 }
@@ -373,4 +380,12 @@ footer small {
 /* TOPページボタンはPCでは非表示にする */
 .pagetop a{
     display: none; /*初期設定ではボタンは非表示にする*/
+}
+
+.globalMenuSp{
+  display: none;
+}
+
+.navToggle{
+  display: none; 
 }

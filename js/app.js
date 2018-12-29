@@ -1,6 +1,6 @@
 // アルバムデータの作成
 var album = [
-  { src: 'images/item02.jpg', msg: 'Matching Box | 制作期間約3週間'},
+  { src: 'images/item02.jpg', msg: 'Matching Box | 制作期間約3~4週間'},
   { src: 'images/matchapp_thumb2.jpg', msg: 'スワイプでお気に入りの人を見つける'},
   { src: 'images/matchapp_thumb3.jpg', msg: '自己紹介ページ'},
   { src: 'images/matchapp_thumb1.jpg', msg: '条件検索でお目当の相手を見つける'},
