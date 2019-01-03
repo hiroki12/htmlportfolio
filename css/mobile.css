@@ -126,6 +126,8 @@
       -moz-opacity: 0.5;
       opacity: 0.5;
   }
+
+  /* ハンバーガーメニュー */
   .globalMenuSp{
     display: block;
   }
