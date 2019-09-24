@@ -235,7 +235,6 @@ footer small {
   color: #9C9689;
   text-align: center;
 }
-}
 
 #news dl { overflow: hidden; }
 #news dt {
@@ -271,7 +270,12 @@ footer small {
   text-align:center;
 }
 
-.wordpress-img{
+.vuejs-img{
+  text-align:center;
+  margin: 10px 0 30px 0;
+}
+
+.aws-img{
   text-align:center;
   margin: 10px 0 30px 0;
 }
@@ -387,5 +391,5 @@ footer small {
 }
 
 .navToggle{
-  display: none; 
+  display: none;
 }
